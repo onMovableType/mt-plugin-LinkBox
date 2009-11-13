@@ -17,11 +17,11 @@ Manage and publish multiple blogrolls (lists of  links).
 
 ## Features
 
-* Create LinkBoxes
-* Add links with label for each to LinkBoxes
-* Preferences for:
-    * list style ("ul" or "ol")
-    * link list sort order
+* Create and Manage LinkBoxes
+* Add links with label for each to LinkBox
+* Plugin preferences for:
+    * list style: "ul" or "ol"
+    * link list sort order: order added or alphabetical
 * Tags to output LinkBoxes
 
 
@@ -30,6 +30,11 @@ Manage and publish multiple blogrolls (lists of  links).
 ### Container Tags
 
 * `mt:LinkBoxes` - Loops over linkboxes for the blog and name provided
+* `mt:LinkBoxLinks` - Loops over links for the linkbox in context
+
+### Function Tags
+
+* `mt:LinkBox` - Returns a single linkbox specified by name (or it grabs the latest one) as a html list.
 
     Attributes:
     
@@ -38,11 +43,6 @@ Manage and publish multiple blogrolls (lists of  links).
     * `list_style` - "ul" (default) or "ol" (can be specified in plugin settings as well)
     * `sort_order` - "added" (default) or "alpha" (can be specified in plugin settings as well)
 
-* `mt:LinkBoxLinks` - Loops over links for the linkbox in context
-
-### Function Tags
-
-* `mt:LinkBox` - Returns a single linkbox specified by name (or it grabs the latest one) as a html list. Supports the same attributes as `mt:LinkBoxes` tag
 * `mt:LinkBoxDescription` - description for the linkbox in context
 * `mt:LinkBoxName` - name for the linkbox in context
 * `mt:LinkBoxLinkURL` - URL for the link in context
