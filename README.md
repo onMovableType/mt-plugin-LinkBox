@@ -101,7 +101,7 @@ Should look like this when installed:
 
 ## Desired Features
 
-* add `mt:LinkBox` attributes to `mt:LinkBoxs` tag
+* add `mt:LinkBox` attributes to `mt:LinkBoxes` tag
 
 
 ## Support
