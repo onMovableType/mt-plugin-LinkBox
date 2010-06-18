@@ -206,9 +206,21 @@ sub _hdlr_link_boxes {
     my ( $ctx, $args, $cond ) = @_;
 
     my $blog_id = $ctx->stash('blog_id');
+
+    my $linkbox_id = $args->{id} if $args->{id};
+    my $linkbox_name = $args->{name} if $args->{name};
+
+    my @lists;
     require LinkBox::LinkList;
-    my @lists = LinkBox::LinkList->load( { blog_id => $blog_id },
-        { sort => 'name', direction => 'ascend' } );
+
+    if ($linkbox_id) {
+        @lists = LinkBox::LinkList->load ({ id => $linkbox_id });
+    } elsif ($linkbox_name) {
+        @lists = LinkBox::LinkList->load ({ name => $linkbox_name });
+    } else {
+        @lists = LinkBox::LinkList->load( { blog_id => $blog_id },
+                { sort => 'name', direction => 'ascend' } );
+    }    
 
     my $res = '';
     for my $list (@lists) {
