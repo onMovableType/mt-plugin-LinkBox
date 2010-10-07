@@ -1,7 +1,7 @@
 # LinkBox, a plugin for Movable Type
 
-Authors: Six Apart, Ltd.  
-Copyright: 2009 Six Apart, Ltd.  
+Authors: Six Apart
+Copyright: 2009 Six Apart Ltd.
 License: [Artistic License 2.0](http://www.opensource.org/licenses/artistic-license-2.0.php)
 
 
@@ -32,7 +32,7 @@ Manage and publish multiple blogrolls (lists of  links).
 * `mt:LinkBoxes` - Loops over linkboxes for the blog and name provided
 
     Attributes:
-    
+
     * `id` - optional id of a single LinkBox
     * `name` - optional name of a single LinkBox
 
@@ -43,7 +43,7 @@ Manage and publish multiple blogrolls (lists of  links).
 * `mt:LinkBox` - Returns a single linkbox specified by name (or it grabs the latest one) as a html list.
 
     Attributes:
-    
+
     * `blog_id` - optional blog id
     * `name` - optional name of list
     * `list_style` - "ul" (default) or "ol" (can be specified in plugin settings as well)
@@ -102,8 +102,6 @@ Should look like this when installed:
             plugins/
                 LinkBox/
 
-[More in-depth plugin installation instructions](http://tinyurl.com/easy-plugin-install).
-
 
 ## Desired Features
 
@@ -112,4 +110,4 @@ Should look like this when installed:
 
 ## Support
 
-This plugin is not an official Six Apart, Ltd. release, and as such support from Six Apart, Ltd. for this plugin is not available.
+This plugin is not an official Six Apart release, and as such support from Six Apart for this plugin is not available.
